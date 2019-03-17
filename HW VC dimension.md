@@ -1,15 +1,15 @@
-#VC dimension
+# VC dimension
 
-##Abstract   
+##  Abstract   
 To understand the VC dimension explicitly, I would firstly introduce some basic concepts: dichotomy, growth function, shattering and break point. And then I would talk about the upper bound of growth fuction, the VC ineaulity, and its function in application.   
 
-###Dichotomy:  
+### Dichotomy:  
 a division into two especially mutually exclusive or contradictory groups or entities.
 
-###Shatter:  
+### Shatter:  
 Assuming that all dichotomy of data set D can be achieved by some operation H, it is said that data set D can be shatter by this operation H.
 
-###Growth Function: 
+### Growth Function: 
 The growth function for a hypothesis set H, denoted MH(N), is the maximum possible number of dichotomies H can generate on a data.
 
 **Positive rays:**
@@ -56,14 +56,14 @@ The minimum number of N whose hypothesis set cannot be shattered by any distribu
 The Vapnik-hervonenkis (VC) dimension is a measure of the capacity (complexity, expressive power, richness, or flexibility) of a space of functions that can be learned by a statistical classification algorithm. It is defined as the cardinality of the largest set of points that the algorithm can shatter. It was originally defined by Vladimir Vapnik and Alexey Chervonenkis.
 Briefly, So, we could understand the meaning of VC dimension. dvc (H) is the largest value of N for which MH(N) = 2^N^    dvc = k ? 1
 
-##Infinite to finite
+## Infinite to finite
 
 According to the definition, break point k restrict the rang of MH(N). Then, given N and k, it can be proved that the upper bound of the maximum value of MH(N) is polynomial. According to the Hoeffding inequality, it is feasible to use mH(N) instead of M to obtain machine learning.
 
 ![](http://m.qpic.cn/psb?/V12764hq3b2u4E/YqG1oSvATzAAJVJNCC1P9HROTOy28yP9h.7OApphmfc!/b/dL4AAAAAAAAA&bo=LAJeAAAAAAADB1I!&rf=viewer_4)
 
 But when N Towards infinity, the last value above will be more than 1.
-What抯 the problem?
+What is the problem?
 That is the upper bound 2n of growth function is too large, In fact, the growth function does have a smaller upper bound, which is the polynomial.
 According to the definition of B (N, k), the maximum number of dichotomies with N points is k, which is also  ![](http://m.qpic.cn/psb?/V12764hq3b2u4E/ubz*NJjz0QEbS5j71XKanZL7LmfdL2q7SN8U8.ha5.E!/b/dFMBAAAAAAAA&bo=QgAmAAAAAAADB0Y!&rf=viewer_4)  the upper bound of B (N, k) growth function.
 So, MH(N) = N (N,k) <= B(N,k).
@@ -82,7 +82,7 @@ Bring VC dimension into VC inequality (replacing k-1 with dvc)
 As long as the dvc is limited, then when n is large, the right side of inequality is a very small number, then the Eout(h) approximates the training Ein(h), then the hypothesis h has good generalization ability. More importantly, it is concluded that we only need training set D and hypothesis set H to find the optimal hypothesis function.
 
 
-#Reference
+### Reference
  *Vapnik, V. N.; Chervonenkis, A. Ya. (1971). "On the Uniform Convergence of Relative Frequencies of Events to Their Probabilities". Theory of Probability & Its Applications. 16 (2): 264. doi:10.1137/1116025. This is an English translation, by B. Seckler, of the Russian paper: "On the Uniform Convergence of Relative Frequencies of Events to Their Probabilities". Dokl. Akad. Nauk. 181 (4): 781. 1968. The translation was reproduced as: Vapnik, V. N.; Chervonenkis, A. Ya. (2015). "On the Uniform Convergence of Relative Frequencies of Events to Their Probabilities". Measures of Complexity. p. 11. doi:10.1007/978-3-319-21852-6_3. ISBN 978-3-319-21851-9.*
 
 
