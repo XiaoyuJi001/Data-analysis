@@ -1,11 +1,4 @@
-title: "VC dimension"
-author: "Xiaoyu Ji"
-date: '20190313'
-output:
-  pdf_document: 
-    latex_engine: xelatex
-  word_document: default
----
+#VC dimension
 ##Abstract   
 To understand the VC dimension explicitly, I would firstly introduce some basic concepts: dichotomy, growth function, shattering and break point. And then I would talk about the upper bound of growth fuction, the VC ineaulity, and its function in application.   
 
