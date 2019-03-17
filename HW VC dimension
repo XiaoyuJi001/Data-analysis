@@ -59,7 +59,7 @@ N>=5        MH(N) < 2^N^
 **Break points**
 The minimum number of N whose hypothesis set cannot be shattered by any distribution type. So for positive rays MH(2)=3 Break point is 2; For positive intervals, MH(3)=7 break point is 3; For convex set, no break point; For @D perceptron, MH(4)=14 break point is 4. 
 
-The Vapnik朇hervonenkis (VC) dimension is a measure of the capacity (complexity, expressive power, richness, or flexibility) of a space of functions that can be learned by a statistical classification algorithm. It is defined as the cardinality of the largest set of points that the algorithm can shatter. It was originally defined by Vladimir Vapnik and Alexey Chervonenkis.
+The Vapnikhervonenkis (VC) dimension is a measure of the capacity (complexity, expressive power, richness, or flexibility) of a space of functions that can be learned by a statistical classification algorithm. It is defined as the cardinality of the largest set of points that the algorithm can shatter. It was originally defined by Vladimir Vapnik and Alexey Chervonenkis.
 Briefly, So, we could understand the meaning of VC dimension. dvc (H) is the largest value of N for which MH(N) = 2^N^    dvc = k ? 1
 
 ##Infinite to finite
@@ -69,7 +69,7 @@ According to the definition, break point k restrict the rang of MH(N). Then, giv
 ![](http://m.qpic.cn/psb?/V12764hq3b2u4E/YqG1oSvATzAAJVJNCC1P9HROTOy28yP9h.7OApphmfc!/b/dL4AAAAAAAAA&bo=LAJeAAAAAAADB1I!&rf=viewer_4)
 
 But when N Towards infinity, the last value above will be more than 1.
-What抯 the problem?
+What isthe problem?
 That is the upper bound 2n of growth function is too large, In fact, the growth function does have a smaller upper bound, which is the polynomial.
 According to the definition of B (N, k), the maximum number of dichotomies with N points is k, which is also  ![](http://m.qpic.cn/psb?/V12764hq3b2u4E/ubz*NJjz0QEbS5j71XKanZL7LmfdL2q7SN8U8.ha5.E!/b/dFMBAAAAAAAA&bo=QgAmAAAAAAADB0Y!&rf=viewer_4)  the upper bound of B (N, k) growth function.
 So, MH(N) = N (N,k) <= B(N,k).
